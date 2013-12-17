@@ -17,3 +17,10 @@ Important: It's only intended for Multisite. If you use it in standard WordPress
 1. Upload to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in Network Admin
 
+== Changelog ==
+
+= 0.3 =
+* i18n
+
+= 0.2 =
+* First version
