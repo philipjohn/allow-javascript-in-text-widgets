@@ -3,7 +3,7 @@
 Plugin Name: Allow Javascript in Text Widgets
 Plugin URI: http://philipjohn.co.uk/#pj-better-multisite-text-widget
 Description: Replaces the default text widget with one that allows Javascript so you can do basic things like add Google Ads to your sidebar without using other plugins.
-Version: 0.3
+Version: 0.3.1
 Author: Philip John
 Author URI: http://philipjohn.co.uk
 License: GPL2
