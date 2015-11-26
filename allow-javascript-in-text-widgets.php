@@ -19,7 +19,7 @@ class WP_Widget_Text_With_JS extends WP_Widget {
     function __construct() {
         $widget_ops = array(
 			'classname' => 'widget_text',
-			'description' => __('Arbitrary text or HTML', 'allow-javascript-in-text-widgets')
+			'description' => esc_html__('Arbitrary text or HTML', 'allow-javascript-in-text-widgets')
         );
         $control_ops = array(
 			'width' => 400,
@@ -27,7 +27,7 @@ class WP_Widget_Text_With_JS extends WP_Widget {
         );
         parent::__construct(
             'text',
-            __('Text', 'allow-javascript-in-text-widgets'),
+				esc_html__('Text', 'allow-javascript-in-text-widgets'),
             $widget_ops,
             $control_ops
         );
@@ -62,12 +62,12 @@ class WP_Widget_Text_With_JS extends WP_Widget {
         $title = strip_tags($instance['title']);
         $text = esc_textarea($instance['text']);
     ?>
-     <p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'allow-javascript-in-text-widgets'); ?></label>
+     <p><label for="<?php echo $this->get_field_id('title'); ?>"><?php esc_html_e('Title:', 'allow-javascript-in-text-widgets'); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></p>
 
 		<textarea class="widefat" rows="16" cols="20" id="<?php echo $this->get_field_id('text'); ?>" name="<?php echo $this->get_field_name('text'); ?>"><?php echo $text; ?></textarea>
 
-		<p><input id="<?php echo $this->get_field_id('filter'); ?>" name="<?php echo $this->get_field_name('filter'); ?>" type="checkbox" <?php checked(isset($instance['filter']) ? $instance['filter'] : 0); ?> />&nbsp;<label for="<?php echo $this->get_field_id('filter'); ?>"><?php _e('Automatically add paragraphs', 'allow-javascript-in-text-widgets'); ?></label></p>
+		<p><input id="<?php echo $this->get_field_id('filter'); ?>" name="<?php echo $this->get_field_name('filter'); ?>" type="checkbox" <?php checked(isset($instance['filter']) ? $instance['filter'] : 0); ?> />&nbsp;<label for="<?php echo $this->get_field_id('filter'); ?>"><?php esc_html_e('Automatically add paragraphs', 'allow-javascript-in-text-widgets'); ?></label></p>
 	<?php
     }
 }
